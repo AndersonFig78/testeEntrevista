@@ -1,0 +1,2 @@
+para funcionar, é necessário ter a biblioteca ACbr
+ e ter um e-mail do gmail que possa informar na aba "Configuração"
