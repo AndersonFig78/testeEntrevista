@@ -72,7 +72,7 @@ class procedure TCadastroCliente.Excluir;
 begin
   if estaAberto then
   begin
-    if MessageDlg('Você deseja realmente remover este registro?', mtInformation, [mbYes, mbNo], 0) = mrYes then
+    if MessageDlg('VocÃª deseja realmente remover este registro?', mtInformation, [mbYes, mbNo], 0) = mrYes then
     begin
       dtmdlCadastroCliente.cdsCadastroCliente.Delete;
     end;
@@ -129,8 +129,8 @@ begin
       //Caso seja para enviar o arquivo via e-mail.
       objBiblioteca := TBiblioteca.Create;
       objBiblioteca.Envia_EMail(
-              'anderson.desenvolvimento@gmail.com', 'sistema'
-              , 'anderson.desenvolvimento@gmail.com', 'base do cadastro de cliente'
+              lsLogin, 'sistema'
+              , lsEmailDestinatario, 'base do cadastro de cliente'
               , '', ''
               , lsLogin, lsSenha, lsSmtpHost, lsPortaSMTP, lsNomeArquivo, lsCaminho, Stream);
       FreeAndNil(Stream);
